@@ -1,0 +1,6 @@
+{
+  "name": "Neural Response Calibration",
+  "description": "A technical diagnostic tool designed to measure ocular reactivity and micro-saccade precision through focused visual stimulus tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
