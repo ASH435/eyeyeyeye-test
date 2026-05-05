@@ -11,8 +11,8 @@ import { Activity, Shield, Cpu, RefreshCcw, AlertTriangle } from 'lucide-react';
 const SCREAM_SFX = "https://actions.google.com/sounds/v1/horror/ghost_female_scream.ogg";
 const AMBIENCE_SFX = "https://actions.google.com/sounds/v1/ambiences/wind_heavy_with_whistle.ogg";
 const HEARTBEAT_SFX = "https://actions.google.com/sounds/v1/human/heartbeat_slow.ogg";
-// Local asset path
-const JUMPSCARE_IMAGE = "/assets/jumpscare.jpg"; 
+// High-quality creepy ghost face matching the user's provided aesthetic
+const JUMPSCARE_IMAGE = "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=2000"; 
 
 enum State {
   IDLE,
