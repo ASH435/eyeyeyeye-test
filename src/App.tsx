@@ -11,8 +11,8 @@ import { Activity, Shield, Cpu, RefreshCcw, AlertTriangle } from 'lucide-react';
 const SCREAM_SFX = "https://actions.google.com/sounds/v1/horror/ghost_female_scream.ogg";
 const AMBIENCE_SFX = "https://actions.google.com/sounds/v1/ambiences/wind_heavy_with_whistle.ogg";
 const HEARTBEAT_SFX = "https://actions.google.com/sounds/v1/human/heartbeat_slow.ogg";
-// A very creepy distorted image
-const JUMPSCARE_IMAGE = "https://bloody-disgusting.com/wp-content/uploads/2023/12/Art-the-Clown-Santa-Terrifier-3.jpg"; 
+// Local asset path
+const JUMPSCARE_IMAGE = "/assets/jumpscare.jpg"; 
 
 enum State {
   IDLE,
@@ -81,7 +81,7 @@ export default function App() {
 
         if (testTime > 8000) { // After 8 seconds of testing
           setState(State.PRE_SCARE);
-          addLog("ANOMALOUS ACTIVITY DETECTED.");
+          addLog("SUBSYSTEM LATENCY INCREASED.");
           if (heartbeatAudioRef.current) {
             heartbeatAudioRef.current.loop = true;
             heartbeatAudioRef.current.play().catch(() => {});
@@ -260,10 +260,10 @@ export default function App() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, scale: 0.98 }}
-                className={`text-[11px] flex items-center gap-3 ${log.includes('ANOMALOUS') ? 'text-red-500' : 'text-white/70'}`}
+                className={`text-[11px] flex items-center gap-3 ${log.includes('LATENCY') ? 'text-white/40' : 'text-white/70'}`}
               >
                 <span className="opacity-20 font-mono">[{new Date().toLocaleTimeString([], { hour12: false })}]</span>
-                <span className={`tracking-tight ${log.includes('ANOMALOUS') ? 'font-black' : 'font-medium'}`}>{log}</span>
+                <span className={`tracking-tight ${log.includes('LATENCY') ? 'font-black' : 'font-medium'}`}>{log}</span>
               </motion.div>
             ))}
           </AnimatePresence>
